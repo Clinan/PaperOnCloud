@@ -8,8 +8,8 @@
 - 场景漫游对于摄像机视角的移动有问题。
 ---
 ## 本案例可以使用的识别图有
-- 骨骼动画识别图
+### 骨骼动画识别图
 ![骨骼动画识别图](https://github.com/Clinan/PaperOnCloud/blob/master/robot.png)
 
-- 场景识别图
+### 场景识别图
 ![场景识别图](https://github.com/Clinan/PaperOnCloud/blob/master/house.png)
