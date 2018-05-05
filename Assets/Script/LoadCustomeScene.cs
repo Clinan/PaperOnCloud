@@ -20,20 +20,20 @@ public class LoadCustomeScene : MonoBehaviour
     {
         //DestroyObject(optionCanvas);
 
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            AndroidJavaClass jc = new AndroidJavaClass("com.quyue.paperoncloud.UnityActivity");
-            AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("mActivity");
-            string[] mObject = new string[2];
-            bool result = jo.Call<bool>("showDialog", mObject);
-            if (result)
-            {
-                SceneManager.LoadScene(sceneName);
+        //if (Application.platform == RuntimePlatform.Android)
+        //{
+        //    AndroidJavaClass jc = new AndroidJavaClass("com.quyue.paperoncloud.UnityActivity");
+        //    AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("mActivity");
+        //    string[] mObject = new string[2];
+        //    bool result = jo.Call<bool>("showDialog", mObject);
+        //    if (result)
+        //    {
+        //        SceneManager.LoadScene(sceneName);
            
-            }
-        }
-        else
-        {
+        //    }
+        //}
+        //else
+        //{
 
             optionCanvas = Instantiate(optionCanvas);
             Button[] bs = optionCanvas.GetComponentsInChildren<Button>();
@@ -49,9 +49,10 @@ public class LoadCustomeScene : MonoBehaviour
                 }
 
             }
-            okButton.onClick.AddListener(OkOnClick);
-            cancelButton.onClick.AddListener(CancelOnClick);
-        }
+
+        okButton.onClick.AddListener(OkOnClick);
+        cancelButton.onClick.AddListener(CancelOnClick);
+        //}
     }
 
     // Update is called once per frame
@@ -66,12 +67,12 @@ public class LoadCustomeScene : MonoBehaviour
         
             Debug.Log("ok");
             optionCanvas.gameObject.SetActive(false);
-            DestroyImmediate(optionCanvas, true);
-            Component[] component = optionCanvas.GetComponentsInChildren<Component>();
-            foreach (Component c in component)
-            {
-                DestroyImmediate(c, true);
-            }
+            //DestroyImmediate(optionCanvas, true);
+            //Component[] component = optionCanvas.GetComponentsInChildren<Component>();
+            //foreach (Component c in component)
+            //{
+            //    DestroyImmediate(c, true);
+            //}
             Scene first = SceneManager.GetSceneByName("first");
             SceneManager.UnloadSceneAsync(first);
             SceneManager.LoadScene(sceneName);

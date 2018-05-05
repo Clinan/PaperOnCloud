@@ -14,11 +14,10 @@ public class SceneBack : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //Scene scene = SceneManager.GetSceneByName("first");
+            Scene scene = SceneManager.GetSceneByName("first");
             //SceneManager.UnloadSceneAsync(scene);
-            //SceneManager.LoadScene("first");
-            //SceneManager
-            Application.Quit();
+            SceneManager.LoadScene("first");
+            //Application.Quit();
         }
     }
 }
