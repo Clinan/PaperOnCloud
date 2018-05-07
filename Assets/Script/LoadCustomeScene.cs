@@ -29,12 +29,12 @@ public class LoadCustomeScene : MonoBehaviour
         //    if (result)
         //    {
         //        SceneManager.LoadScene(sceneName);
-           
+
         //    }
         //}
         //else
         //{
-
+        Debug.Log("start load");
             optionCanvas = Instantiate(optionCanvas);
             Button[] bs = optionCanvas.GetComponentsInChildren<Button>();
             foreach (Button b in bs)
@@ -73,8 +73,8 @@ public class LoadCustomeScene : MonoBehaviour
             //{
             //    DestroyImmediate(c, true);
             //}
-            Scene first = SceneManager.GetSceneByName("first");
-            SceneManager.UnloadSceneAsync(first);
+            //Scene first = SceneManager.GetSceneByName("first");
+            //SceneManager.UnloadSceneAsync(first);
             SceneManager.LoadScene(sceneName);
         
         
