@@ -73,8 +73,8 @@ public class LoadCustomeScene : MonoBehaviour
             //{
             //    DestroyImmediate(c, true);
             //}
-            //Scene first = SceneManager.GetSceneByName("first");
-            //SceneManager.UnloadSceneAsync(first);
+            Scene first = SceneManager.GetSceneByName("first");
+            SceneManager.UnloadSceneAsync(first);
             SceneManager.LoadScene(sceneName);
         
         
