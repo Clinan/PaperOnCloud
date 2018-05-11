@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/test.unity
     guid: 8680129a9267c774ab3f914857a38609
+  - enabled: 1
+    path: Assets/peppaScene.unity
+    guid: 629943ab96050f747bc6caa48d9046c5
